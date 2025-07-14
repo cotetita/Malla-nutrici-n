@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Nutrición y Dietética</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .anio { margin-top: 20px; }
+    .periodo { margin-left: 20px; }
+    .asignatura { cursor: pointer; margin: 5px 0; }
+    .detalle { display: none; margin-left: 20px; color: gray; }
+    .aprobada { color: green; }
+    .reprobada { color: red; }
+    .inscrita { color: blue; }
+  </style>
+</head>
+<body>
+
+  <h1>Malla Interactiva - Nutrición y Dietética</h1>
+
+  <div class="anio">
+    <h2>Año 1</h2>
+    <div class="periodo">
+      <strong>Periodo 1</strong>
+      <div class="asignatura aprobada" onclick="toggleDetalle(this)">
+        Biología Celular (3)
+        <div class="detalle">Código: NYDIE-CT-01-01-1</div>
+      </div>
+      <div class="asignatura reprobada" onclick="toggleDetalle(this)">
+        Química General y Orgánica (6)
+        <div class="detalle">Código: NYDIE-CT-02-01-1</div>
+      </div>
+      <div class="asignatura inscrita" onclick="toggleDetalle(this)">
+        Matemáticas (3)
+        <div class="detalle">Código: NYDIE-CT-04-01-1</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleDetalle(element) {
+      const detalle = element.querySelector('.detalle');
+      detalle.style.display = detalle.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+
+</body>
+</html>
